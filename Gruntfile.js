@@ -32,6 +32,7 @@ module.exports = function (grunt) {
 					compass: true,
 					style: "compressed", // Can be nested, compact, compressed, expanded
 					precision: 2,
+					bundleExec: true,
 				},
 				files: {
 					"css/regexr.css": "scss/regexr.scss"
@@ -166,6 +167,10 @@ module.exports = function (grunt) {
 		"inline",
 		"parse-index",
 		"copy",
+		// "connect:build"
+	]);
+
+	grunt.registerTask("serve", [
 		"connect:build"
 	]);
 };
