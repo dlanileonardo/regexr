@@ -5,47 +5,38 @@ RegExr
 This is the source for [RegExr.com](http://regexr.com/)
 RegExr is a HTML/JS based tool for creating, testing, and learning about Regular Expressions.
 
-# Build
-## RegExr uses [Grunt](http://gruntjs.com/) to manage the build process.
+# Running locally
 
-## To use
+Click the button bellow to quickly and safely install this project on your local machine.
 
-Note that this requires a familiarity with using the command line.
-The example commands shown are for use with the OSX Terminal.
+[![Run project](https://s3-sa-east-1.amazonaws.com/assets.azk.io/azk-button.png)](http://run-stage.azk.io/start/?repo=azk-button/regexr&ref=azkfile)
 
-### Install dependencies
+The `Run Project` button employs `azk`, a lightweight open source orchestration tool that will automatically isolate and configure the application's environment for you.
 
-Node (0.10.24 or greater is required):
+Learn more about `azk` [here](Azkfile.md).
 
-	# check the version via the command line
-	node -v
+# Deploying to DigitalOcean
 
-If your Node install is out of date, get the latest from [NodeJS.org](http://nodejs.org/)
+After you run this project locally using [`Run Project` button](#running-locally), deploying to [DigitalOcean](http://digitalocean.com/) is very simple.
 
-After node is setup, install the other dependencies. You may want to familiarize yourself with the Node Packager Manager (NPM) before proceeding.
+First, be sure you have SSH keys configured in your machine. If you don't have it yet (or if you aren't sure about it), just follow steps 1 and 2 of [this tutorial](https://help.github.com/articles/generating-ssh-keys/).
 
-	# Install the grunt command line utility globally
-	sudo npm install grunt-cli -g
+Next, put your [personal access token](https://cloud.digitalocean.com/settings/applications) into a `.env` file:
 
-	# Install all the dependencies from package.json
-	npm install
+```bash
+$ cd path/to/the/project
+$ echo "DEPLOY_API_TOKEN=<YOUR-PERSONAL-ACCESS-TOKEN>" >> .env
+```
 
-### Development
-Run ```grunt;``` to start a local dev server. grunt will also watch for changes in the local sass and javascript files.
+Then, just run the following:
 
-### Building
-To prepare the site for a deploy run:
+```bash
+$ azk shell deploy
+```
 
-	grunt build;
+The `Run Project` button employs `azk`, a lightweight open source orchestration tool that will automatically isolate and configure the application's environment for you.
 
-This command will:
-
-* Copy all required assets to the build/ folder.
-* Combine and minify the *.js files
-* Compile and minify the sass
-* Inject js/index.template.js into the index.html file
-* Minify the index.html file
-
+Find further instructions on how to deploy to DigitalOcean using `azk` [here](http://docs.azk.io/en/deploy/README.html).
 
 # Code Style
 If you would like to contribute back to RegExr.com please send us pull requests.
