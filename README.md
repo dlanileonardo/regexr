@@ -9,7 +9,7 @@ RegExr is a HTML/JS based tool for creating, testing, and learning about Regular
 
 Click the button bellow to quickly and safely install this project on your local machine.
 
-[![Run project](https://s3-sa-east-1.amazonaws.com/assets.azk.io/run-project.png)](http://run.azk.io/start/?repo=azk-button/regexr&ref=azkfile)
+[![Run project](https://s3-sa-east-1.amazonaws.com/assets.azk.io/run-project.png)](http://run.azk.io/start/?repo=run-project/regexr&ref=azkfile)
 
 The `Run Project` button employs `azk`, a lightweight open source orchestration tool that will automatically isolate and configure the application's environment for you.
 
